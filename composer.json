@@ -2,7 +2,7 @@
     "name": "uerka/translation-form-bundle",
     "type": "symfony-bundle",
     "description": "Provides widget to manage entity's translations",
-    "keywords": ["symfony2", "doctrine2", "i18n", "internationalization", "translation", "translatable", "form", "knplabs-behaviors"],
+    "keywords": ["symfony3", "symfony4", "doctrine2", "i18n", "internationalization", "translation", "translatable", "form", "knplabs-behaviors"],
     "homepage": "https://github.com/Uerka/TranslationFormBundle",
     "license": "MIT",
     "authors": [
