@@ -42,7 +42,7 @@ twig:
     ...
     form_themes: 
         ...
-        - 'UerkaTranslationFormBundle:form:fields.html.twig'
+        - '@UerkaTranslationForm/form/fields.html.twig'
 ```
 
 # Using form

@@ -5,7 +5,7 @@ namespace Uerka\TranslationFormBundle\Form\EventListener;
 use Symfony\Component\Form\FormEvent;
 use Symfony\Component\Form\FormEvents;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
-use Uerka\TranslationFormBundle\Form\TranslationItemType;
+use Uerka\TranslationFormBundle\Form\Type\TranslationItemType;
 
 class TranslationsSubscriber implements EventSubscriberInterface
 {

@@ -7,7 +7,7 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\FormView;
 use Symfony\Component\Form\FormInterface;
-use App\Form\EventListener\TranslationsSubscriber;
+use Uerka\TranslationFormBundle\Form\EventListener\TranslationsSubscriber;
 
 class TranslationsType extends AbstractType
 {
