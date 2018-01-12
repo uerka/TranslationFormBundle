@@ -21,7 +21,6 @@
         "psr-4": { "Uerka\\TranslationFormBundle\\": "" }
     },
     "prefer-stable": true,
-    "target-dir": "Uerka/TranslationFormBundle",
     "extra": {
         "branch-alias": {
             "dev-master": "0.x-dev"
