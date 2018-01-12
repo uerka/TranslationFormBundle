@@ -1,11 +1,35 @@
-##Installation
+# UerkaTranslationFormBundle
 
+Simplified version of https://github.com/a2lix/TranslationFormBundle. Supports only https://github.com/KnpLabs/DoctrineBehaviors.
+Supports symfony4
+
+##Installation
 ```bash
 composer require uerka/translation-form-bundle
 ```
 
-## Configuration
+Add to bundles:
 
+Symfony4 - bundles.php
+
+```php 
+return [
+    ...
+    Uerka\TranslationFormBundle\UerkaTranslationFormBundle::class => ['all' => true],
+```
+
+Symfony3 - AppKernel.php
+
+```php 
+public function registerBundles()
+{
+    $bundles = [
+    ...
+    new Uerka\TranslationFormBundle\UerkaTranslationFormBundle(),
+}
+```
+
+## Configuration
 ```yaml
 uerka_translation_form: 
     locales: ["ru", "en"]
@@ -20,7 +44,6 @@ twig:
         ...
         - 'UerkaTranslationFormBundle:form:fields.html.twig'
 ```
-
 
 # Using form
 

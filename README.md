@@ -8,6 +8,27 @@ Supports symfony4
 composer require uerka/translation-form-bundle
 ```
 
+Add to bundles:
+
+Symfony4 - bundles.php
+
+```php 
+return [
+    ...
+    Uerka\TranslationFormBundle\UerkaTranslationFormBundle::class => ['all' => true],
+```
+
+Symfony3 - AppKernel.php
+
+```php 
+public function registerBundles()
+{
+    $bundles = [
+    ...
+    new Uerka\TranslationFormBundle\UerkaTranslationFormBundle(),
+}
+```
+
 ## Configuration
 ```yaml
 uerka_translation_form: 
