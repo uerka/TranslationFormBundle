@@ -7,11 +7,9 @@ use Symfony\Component\Config\FileLocator;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 use Symfony\Component\DependencyInjection\Loader;
 use Uerka\TranslationFormBundle\Form\Type\TranslationsType;
-use Symfony\Component\DependencyInjection\Definition;
 
 class UerkaTranslationFormExtension extends Extension
 {
-
     /**
      * {@inheritdoc}
      */
@@ -20,9 +18,10 @@ class UerkaTranslationFormExtension extends Extension
         $configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);
 
-        $definition = new Definition(TranslationsType::class);
-        $definition->addArgument($config['locales']);
+        $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));
+        $loader->load('services.yml');
 
-        $container->setDefinition(TranslationsType::class, $definition);
+        $definition = $container->getDefinition(TranslationsType::class);
+        $definition->replaceArgument(0, $config['locales']);
     }
 }

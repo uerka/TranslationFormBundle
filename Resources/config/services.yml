@@ -1,0 +1,7 @@
+services:
+    Uerka\TranslationFormBundle\Form\Type:
+        class: Uerka\TranslationFormBundle\Form\Type
+        arguments: 
+            - []
+        tags:
+            - { name: form.type }
