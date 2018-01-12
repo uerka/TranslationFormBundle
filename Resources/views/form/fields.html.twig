@@ -1,8 +1,8 @@
-{% block translations_widget %}
+{% block translations_row %}
     {{ form_errors(form) }}
     {% spaceless %}
         <nav>
-            <div class="nav nav-pills" role="tablist">
+            <div class="nav nav-tabs" role="tablist">
                 {% for locale, fields in form.children %}
                     <a class="nav-item nav-link {%if loop.index == 1 %}active{%endif%}" id="navs-{{form.vars.id}}-{{locale}}" data-toggle="tab" href="#{{form.vars.id}}-{{locale}}" role="tab" aria-controls="{{form.vars.id}}-{{locale}}" aria-selected="true">
                         {{ locale }}
@@ -10,7 +10,7 @@
                 {% endfor %}
             </div>
         </nav>
-        <div class="tab-content" id="nav-tabContent">
+        <div class="tab-content">
             {% for locale, fields in form.children %} 
                 <div class="tab-pane fade show {%if loop.index == 1 %}active{% endif %}" id="{{form.vars.id}}-{{locale}}" role="tabpanel" aria-labelledby="nav-{{form.vars.id}}-{{locale}}">
                     {% for field in fields %}
