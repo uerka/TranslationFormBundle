@@ -18,7 +18,7 @@
         "symfony/config": "~3.4|~4.0"
     },
     "autoload": {
-        "psr-0": { "Uerka\\TranslationFormBundle": "" }
+        "psr-4": { "Uerka\\TranslationFormBundle\\": "" }
     },
     "prefer-stable": true,
     "target-dir": "Uerka/TranslationFormBundle",
