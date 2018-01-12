@@ -5,7 +5,7 @@
             <nav>
                 <div class="nav nav-tabs" role="tablist">
                     {% for locale, fields in form.children %}
-                        <a class="nav-item nav-link {%if loop.index == 1 %}active show{%endif%}" id="navs-{{form.vars.id}}-{{locale}}" data-toggle="tab" href="#{{form.vars.id}}-{{locale}}" role="tab" aria-controls="{{form.vars.id}}-{{locale}}" aria-selected="true">
+                        <a class="nav-item nav-link {%if loop.index == 1 %}active show{%endif%}" id="navs-{{form.vars.id}}-{{locale}}" data-toggle="tab" href="#{{form.vars.id}}-{{locale}}" role="tab" aria-controls="{{form.vars.id}}-{{locale}}" aria-selected="{{ loop.index == 1 ? 'true' : false  }}">
                             {{ locale }}
                         </a>
                     {% endfor %}
