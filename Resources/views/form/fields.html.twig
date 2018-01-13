@@ -1,6 +1,19 @@
 {% block translations_row %}
     {{ form_errors(form) }}
     {% spaceless %}
+        <div class="card">
+            {% if form.vars.label %}
+                <div class="card-header">{{ form.vars.label|trans }}</div>
+            {% endif %}
+            <div class="card-body">
+                {{ form_widget(form) }}
+            </div>
+        </div>
+    {% endspaceless %}
+{% endblock %}
+
+{% block translations_widget %}
+    {% spaceless %}
         <div id="{{form.vars.id}}">
             <nav>
                 <div class="nav nav-tabs" role="tablist">
