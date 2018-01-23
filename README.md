@@ -61,7 +61,7 @@ class ExampleFormType extends AbstractType
         $builder
             ->add('translations', TranslationsType::class, [
                 'locales' => ['ru', 'en', 'fr'], // optional, defaults to bundle's config
-                'required_locales' => ['en'], // optional, default []
+                'required_locales' => ['en'], // optional, defaults to bundle's config (equals to locale option)
                 'fields' => [
                     'name' => [
                         'widget_class' => TextType::class, // optional, default TextType::class
