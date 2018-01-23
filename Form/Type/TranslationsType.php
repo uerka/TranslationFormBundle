@@ -47,7 +47,7 @@ class TranslationsType extends AbstractType
     {
         $resolver->setDefaults([
             'locales' => $this->locales,
-            'required_locales' => [],
+            'required_locales' => $this->locales,
             'fields' => [],
         ]);
     }
