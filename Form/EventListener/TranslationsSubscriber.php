@@ -30,11 +30,12 @@ class TranslationsSubscriber implements EventSubscriberInterface
 
         $fieldsOptions = $formOptions['fields'];
         $entity = $event->getForm()->getParent()->getData();
-
         foreach ($formOptions['locales'] as $locale) {
             $form->add($locale, TranslationItemType::class, [
                 'required' => in_array($locale, $formOptions['required_locales'], true),
                 'fields' => $fieldsOptions,
+                'entity' => $entity,
+                'locale' => $locale,
                 'data_class' => $entity::getTranslationEntityClass(),
             ]);
         }
