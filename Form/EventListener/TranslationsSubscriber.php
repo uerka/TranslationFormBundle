@@ -35,7 +35,8 @@ class TranslationsSubscriber implements EventSubscriberInterface
             $form->add($locale, TranslationItemType::class, [
                 'required' => in_array($locale, $formOptions['required_locales'], true),
                 'fields' => $fieldsOptions,
-                'data_class' => $entity::getTranslationEntityClass(),
+                // if form is within embedded form (CollectionType) we're getting entity === null
+                'data_class' => $entity ? $entity::getTranslationEntityClass() : $event->getForm()->getParent()->getConfig()->getOptions()['data_class'].'Translation',
             ]);
         }
     }
