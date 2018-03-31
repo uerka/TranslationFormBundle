@@ -57,5 +57,7 @@ class TranslationsSubscriber implements EventSubscriberInterface
                 $translation->setTranslatable($entity);
             }
         }
+
+        $event->setData($data);
     }
 }
