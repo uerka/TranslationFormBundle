@@ -51,7 +51,7 @@ class TranslationsSubscriber implements EventSubscriberInterface
 
         foreach ($data as $locale => $translation) {
             if (!$translation) {
-                $data->removeElement($translation);
+                unset($data[$locale]);
             } else {
                 $translation->setLocale($locale);
                 $translation->setTranslatable($entity);
